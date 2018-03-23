@@ -1,0 +1,58 @@
+body {
+  background: rgb(230, 230, 230);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+}
+
+.pixel {
+  height: 15px;
+  width: 15px;
+  outline: solid 1px rgb(230, 230, 230);
+  float: left;
+}
+
+.canvas {
+  background: white;
+  height: 300px;
+  width: 300px;
+}
+
+.palet {
+  background: rgb(192, 191, 191);
+  height: 50px;
+  width: 300px;
+}
+
+.paint {
+  height: 30px;
+  width: 30px;
+  float: left;
+  border-radius: 20px;
+  border: solid 1px white;
+}
+
+.red {
+  background: red;
+}
+
+.green {
+  background: green;
+}
+
+.yellow {
+  background: rgb(253, 216, 7);
+}
+
+.blue {
+  background: rgb(40, 62, 192);
+} 
+
+.black {
+  background: black;
+}  
+
+.white {
+  background: white;
+}
