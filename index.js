@@ -1,5 +1,6 @@
 
 let current_color = null;
+let is_mouse_down = false;
 
 const canvas = document.querySelector(".canvas")
 
@@ -10,13 +11,25 @@ for(let i = 0; i < 400; i++){
     canvas.appendChild(div)
 }
 
-canvas.addEventListener('click', function(event){
+canvas.addEventListener('mousedown', function(event){
+    is_mouse_down = true;
     if(event.target.classList.contains('pixel')){
+        paintPixel(event);
+        
+    }
+})
+
+canvas.addEventListener('mouseover', function(event){
+    if(event.target.classList.contains('pixel') && is_mouse_down){
         paintPixel(event);
     }
 })
 
-const colors = ['red', 'green', 'yellow', 'blue', 'black', 'white']
+document.addEventListener('mouseup', function(event){
+    is_mouse_down = false;
+})
+
+const colors = ['red', 'green', 'yellow', 'blue', 'black', 'white'];
 
 const palet = document.querySelector(".palet");
 
@@ -34,9 +47,10 @@ palet.addEventListener('click', function(event){
 })
 
 function paintPixel(event) {
-    event.target.classList.add(current_color);
+    event.target.style.background = current_color;
+    event.target.style.outline = "0";
 }
 
 function getColor(event) {
-    current_color = event.target.classList.value.split(' ').filter(function(ele){ return ele !== 'paint'})[0]
+    current_color = event.target.classList.value.split(' ').filter(function(ele){ return ele !== 'paint'})[0];
 }

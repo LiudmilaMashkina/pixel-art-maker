@@ -7,6 +7,7 @@ body {
 }
 
 .pixel {
+  background: white;
   height: 15px;
   width: 15px;
   outline: solid 1px rgb(230, 230, 230);
@@ -42,11 +43,11 @@ body {
 }
 
 .yellow {
-  background: rgb(253, 216, 7);
+  background: yellow;
 }
 
 .blue {
-  background: rgb(40, 62, 192);
+  background: blue;
 } 
 
 .black {
